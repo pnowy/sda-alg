@@ -2,8 +2,6 @@ package pl.sda.programming.day1;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-
 class Task17 {
 
     /**
@@ -12,11 +10,5 @@ class Task17 {
      */
     @Test
     void task() {
-        File file = new File("/home/students/");
-        String[] list = file.list((dir, name) -> name.toLowerCase().endsWith(".txt"));
-        assert list != null;
-        for(String f:list){
-            System.out.println(f);
-        }
     }
 }
