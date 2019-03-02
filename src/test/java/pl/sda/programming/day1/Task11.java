@@ -33,4 +33,14 @@ class Task11 {
         return result;
     }
 
+    int fromBinary(String binary) {
+        int result = 0;
+        String reversed = new StringBuilder(binary).reverse().toString();
+        for (int i = 0; i < reversed.length(); i++) {
+            double val = Math.pow(2, i) * Character.getNumericValue(reversed.charAt(i));
+            result += val;
+        }
+        return result;
+    }
+
 }
