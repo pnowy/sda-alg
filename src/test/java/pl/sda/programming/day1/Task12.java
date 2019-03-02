@@ -43,31 +43,24 @@ class Task12 {
 
     }
 
-    public static int fibonacci(int i) {
-        if (i == 0) {
-            return 1;
-        } else if (i == 1) {
-            return 1;
-        } else {
-            return fibonacci(i - 1) + fibonacci(i - 2);
-        }
+    public static int fibonacci(int n) {
+        if (n <= 1) return n;
+        else return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
-    public static BigInteger fibonacci_iterative(int i) {
-        if (i == 0) {
-            return BigInteger.ONE;
-        } else if (i == 1) {
-            return BigInteger.ONE;
+    public static BigInteger fibonacci_iterative(int n) {
+        if (n <= 1) {
+            return BigInteger.valueOf(n);
         } else {
-            BigInteger a = BigInteger.ONE;
-            BigInteger b = BigInteger.ONE;
+            BigInteger fib = BigInteger.ONE;
+            BigInteger prevFib = BigInteger.ONE;
             BigInteger temp;
-            for (int j = 0; j < i; j++) {
-                temp = a.add(b);
-                a = b;
-                b = temp;
+            for (int i = 2; i < n; i++) {
+                temp = fib;
+                fib = fib.add(prevFib);
+                prevFib = temp;
             }
-            return b;
+            return fib;
         }
     }
 }
