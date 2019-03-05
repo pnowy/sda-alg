@@ -13,4 +13,9 @@ public interface Tasks_Arrays {
      */
     double avg(int[] array);
 
+    /**
+     * Wygeneruj tablicę typu int o rozmiarze 'size' z losowymi liczbami.
+     */
+    double random(int size);
+
 }

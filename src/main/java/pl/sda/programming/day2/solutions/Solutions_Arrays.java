@@ -21,4 +21,9 @@ public class Solutions_Arrays implements Tasks_Arrays {
         return sum / array.length;
     }
 
+    @Override
+    public double random(int size) {
+        return 0;
+    }
+
 }
