@@ -2,6 +2,9 @@ package pl.sda.programming.day2.solutions;
 
 import pl.sda.programming.day2.tasks.Tasks_Arrays;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class Solutions_Arrays implements Tasks_Arrays {
 
     @Override
@@ -22,8 +25,12 @@ public class Solutions_Arrays implements Tasks_Arrays {
     }
 
     @Override
-    public double random(int size) {
-        return 0;
+    public int random(int size) {
+        int[] array = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = new Random().nextInt(10);
+        }
+        return Arrays.stream(array).sum();
     }
 
 }
