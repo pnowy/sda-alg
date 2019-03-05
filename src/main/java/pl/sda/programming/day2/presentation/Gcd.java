@@ -1,5 +1,8 @@
 package pl.sda.programming.day2.presentation;
 
+/**
+ * GDC - greatest common divisor / największy wspólny dzielnik.
+ */
 public class Gcd {
 
     public static void main(String... args) {
