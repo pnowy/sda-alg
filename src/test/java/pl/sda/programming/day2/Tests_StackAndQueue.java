@@ -1,6 +1,7 @@
 package pl.sda.programming.day2;
 
 import org.junit.jupiter.api.Test;
+import pl.sda.programming.day2.solutions.Solutions_Queue;
 import pl.sda.programming.day2.solutions.Solutions_Stack;
 
 import java.util.Deque;
@@ -45,4 +46,14 @@ class Tests_StackAndQueue {
         System.out.println(queue.getFirst());
     }
 
+    @Test
+    void testOwnQueue() {
+        Solutions_Queue<String> ownQueue = new Solutions_Queue<>();
+
+        ownQueue.enqueue("pn");
+        ownQueue.enqueue("sda");
+
+        System.out.println(ownQueue.isEmpty());
+        System.out.println(ownQueue.peek());
+    }
 }
