@@ -44,6 +44,7 @@ class Tests_Lists {
         myList.add(1, "b");
 
         log.info("{}", myList);
+        log.info("{}", myList.get(0));
 
         myList.remove("b");
 

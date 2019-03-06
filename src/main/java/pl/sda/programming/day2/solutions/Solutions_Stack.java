@@ -46,17 +46,13 @@ public class Solutions_Stack<T> implements Tasks_Stack<T> {
 
     @Override
     public String toCoolString() {
-        String coolString = "";
+        StringBuilder sb = new StringBuilder();
         Node walker = top;
         while (walker != null) {
-            coolString += "+-----+\n" +
-                    "| " + walker.value + " |\n" +
-                    "+-----+\n" +
-                    "   |   \n";
-
+            sb.append("+-----+\n| ").append(walker.value).append(" |\n+-----+\n   |   \n");
             walker = walker.bottomNext;
         }
-        return coolString;
+        return sb.toString();
     }
 
     private static class Node<T> {

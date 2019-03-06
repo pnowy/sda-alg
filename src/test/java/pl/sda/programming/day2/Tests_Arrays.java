@@ -13,4 +13,10 @@ class Tests_Arrays {
         double avg = arrays.avg(new int[]{1, 5, 6, 19});
         assertThat(avg).isEqualTo(7.75);
     }
+
+    @Test
+    void arrayInitializationExamples() {
+        int[] intArray = new int[10];
+        int intArray2[] = new int[10];
+    }
 }
