@@ -4,10 +4,7 @@ import org.junit.jupiter.api.Test;
 import pl.sda.programming.day2.solutions.Solutions_Queue;
 import pl.sda.programming.day2.solutions.Solutions_Stack;
 
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 class Tests_StackAndQueue {
 
@@ -44,6 +41,17 @@ class Tests_StackAndQueue {
         queue.offerFirst("aaa");
 
         System.out.println(queue.getFirst());
+    }
+
+    @Test
+    void priorityQueue() {
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+        priorityQueue.offer(99);
+        priorityQueue.offer(12);
+        priorityQueue.offer(20);
+
+        System.out.println(priorityQueue.peek());
+
     }
 
     @Test
