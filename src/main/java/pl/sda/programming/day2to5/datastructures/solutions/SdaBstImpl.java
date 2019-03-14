@@ -26,7 +26,7 @@ public class SdaBstImpl<T extends Comparable<T>> implements SdaBst<T> {
     }
 
     private void insert(Node node, T element) {
-        if (node.value.compareTo(element) < 0) {
+        if (node.value.compareTo(element) < 0) { // sprawdzamy tutaj wynik funkcji compare, tzn. czy element dodawany ma mniejszą wartość niż obecna wartość dla węzła
             if (node.right == null) {
                 node.right = new Node(element, null, null);
             } else {
