@@ -1,21 +1,22 @@
 package pl.sda.programming.day2to5.streams;
 
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pl.sda.programming.day2to5.datastructures.solutions.Solutions_Streams;
 import pl.sda.programming.day2to5.datastructures.tasks.Tasks_Streams;
 import pl.sda.programming.day2to5.datastructures.tasks.Tasks_Streams.Book;
 import pl.sda.programming.day2to5.datastructures.tasks.Tasks_Streams.BookRepository;
+import pl.sda.programming.day2to5.datastructures.tasks.Tasks_Streams.Student;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 import static java.util.Collections.emptyList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 class Test_Streams {
+    private static final Logger log = LoggerFactory.getLogger(Test_Streams.class);
 
     Tasks_Streams streams = new Solutions_Streams();
 
@@ -100,4 +101,9 @@ class Test_Streams {
         assertFalse(streams.findMostEditions().isPresent());
     }
 
+    @Test
+    void testAvgOfStudents() {
+        OptionalDouble studentsAverage = streams.getStudentsAverage(new Student("Jan", 3, 6), new Student("Janusz", 1, 3));
+        log.info("{}", studentsAverage);
+    }
 }

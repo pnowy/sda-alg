@@ -14,6 +14,53 @@ public interface Tasks_Streams {
     OptionalInt indexOf(String string, char c);
 
     /**
+     * Zwróć maximum z tablicy int-ów.
+     */
+    OptionalInt getMax(int[] ints);
+
+    /**
+     * Zwróć max z listy integerów.
+     */
+    OptionalInt getMax(List<Integer> ints);
+
+    /**
+     * Wylicz średnią z listy int-ów.
+     */
+    OptionalDouble getAverage(List<Integer> integers);
+
+    /**
+     * Wylicz średnią wszystkich studentów
+     */
+    OptionalDouble getStudentsAverage(Student... students);
+
+    /**
+     * Napisz funkcję, która przyjmie liste Integerów i zwróci jeden string który składa się z wszystkich liczb połączonych przecinkami.
+     *
+     * przykład: [1,2,10] -> "[1,2,10]"
+     */
+    String concat(List<Integer> integers);
+
+
+    /**
+     * Do funkcji concat dodaj rozpoznawanie czy liczba jest parzysta czy nieparzysta.
+     * Jeżeli liczba jest parzysta poprzedz ja "e", jeżeli jest nieparzysta poprzedź ja "o".
+     *
+     *  przykład: [1,2,10] -> "[o1,e2,e10]"
+     */
+    String concatConditional(List<Integer> integers);
+
+    /**
+     * Napisz metodę która zsumuje liczby wieksze niż 10
+     */
+    int sumGreaterThan10(List<Integer> integers);
+
+    /**
+     * Napisz funkcję która dostanie listę imion, każde imie zapisze wielkimi literami i zwróci tylko unikalne imiona.
+     * Dodatkowo funkcja ma zwracać maksymalnie 10 imion
+     */
+    List<String> distinctUpperCase(List<String> names);
+
+    /**
      * Znajduje autora książki o podanym tytule.
      */
     Optional<String> findAuthorByTitle(BookRepository repository, String title);
@@ -79,6 +126,24 @@ public interface Tasks_Streams {
 
         public int getNumEditions() {
             return numEditions;
+        }
+    }
+
+    class Student {
+        private String name;
+        private List<Integer> grades;
+
+        public Student(String name, Integer ... grades) {
+            this.name = name;
+            this.grades = Arrays.asList(grades);
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public List<Integer> getGrades() {
+            return grades;
         }
     }
 
