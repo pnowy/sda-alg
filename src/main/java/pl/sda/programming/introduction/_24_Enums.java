@@ -41,7 +41,22 @@ final class _24_Enums {
 }
 
 enum Status {
-    IN_PROGRESS(1), SENT(2), DELIVERED(3);
+    IN_PROGRESS(1) {
+        @Override
+        void doSomething() {
+            System.out.println("in progress");
+        }
+    }, SENT(2) {
+        @Override
+        void doSomething() {
+            System.out.println("sent");
+        }
+    }, DELIVERED(3) {
+        @Override
+        void doSomething() {
+            System.out.println("delivered");
+        }
+    };
 
     private int value;
 
@@ -52,4 +67,6 @@ enum Status {
     public int getValue() {
         return value;
     }
+
+    abstract void doSomething();
 }

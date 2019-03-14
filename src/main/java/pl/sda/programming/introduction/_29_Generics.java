@@ -25,6 +25,21 @@ final class _29_Generics {
         String oneStr  = pair1.getLeft();
         Integer oneInt = pair1.getRight();
 
+
+        Box<String> box = new Box<>("SDA");
+        System.out.println(box.getValue());
+    }
+}
+
+class Box<T> {
+    T value;
+
+    public Box(T value) {
+        this.value = value;
+    }
+
+    public T getValue() {
+        return value;
     }
 }
 
