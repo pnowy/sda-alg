@@ -48,6 +48,12 @@
             <version>${logback-classic.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.kie.modules</groupId>
+            <artifactId>org-apache-commons-math</artifactId>
+            <version>6.5.0.Final</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit.jupiter.version}</version>
