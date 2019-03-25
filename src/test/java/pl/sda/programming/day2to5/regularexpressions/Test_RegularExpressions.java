@@ -20,6 +20,8 @@ class Test_RegularExpressions {
     void simpleMatchingFromString() {
         boolean numberMatching = "123".matches("\\d{3}");
         log.info("number matching={}", numberMatching);
+
+        log.info("or matching: {}", "ala".matches("[abc]la"));
     }
 
     @Test
