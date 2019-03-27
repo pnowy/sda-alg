@@ -28,6 +28,7 @@ public class CheckJavaMemory {
                                 ", Free: " + humanReadableByteCount(free));
                 prevTotal = total;
                 prevFree = free;
+                //        System.gc();
             }
 //            Thread.sleep(5);
             map.put(i, new NewObject());
