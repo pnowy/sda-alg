@@ -15,15 +15,17 @@ public class Rectangle {
         return width;
     }
 
-    public void setWidth(int width) {
+    public Rectangle setWidth(int width) {
         this.width = width;
+        return this;
     }
 
     public int getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public Rectangle setHeight(int height) {
         this.height = height;
+        return this;
     }
 }

@@ -30,12 +30,12 @@ public class CheckJavaMemory {
                 prevFree = free;
                 //        System.gc();
             }
-//            Thread.sleep(5);
+            Thread.sleep(5);
             map.put(i, new NewObject());
-//            if (i % 2 == 0) {
-//                Integer key = map.keySet().iterator().next();
-//                map.remove(key);
-//            }
+            if (i % 2 == 0) {
+                Integer key = map.keySet().iterator().next();
+                map.remove(key);
+            }
         }
 
         // long[][] ary = new long[Integer.MAX_VALUE][Integer.MAX_VALUE];
